@@ -5,6 +5,7 @@
     <h2>{{ counter }}</h2>
     <button @click="add">+</button>
     <button @click="minus">-</button>
+    <button @click="printlog">PrintLog</button>
   </div>
   <Footer></Footer>
 </template>
@@ -23,7 +24,7 @@
 import { ref } from 'vue';
 import Footer from '@/views/components/Footer.vue';
 
-const counter = ref(0)
+const counter = ref(0);
 
 const add = (): void => {
       counter.value = counter.value + 1
@@ -31,6 +32,10 @@ const add = (): void => {
 
 const minus = (): void => {
   counter.value = counter.value - 1
+}
+
+const printlog = (): void => {
+  console.log('log here!');
 }
 
 </script>
