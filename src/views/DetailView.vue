@@ -3,9 +3,12 @@
     <h1>This is an detail page</h1>
     <h2>ref & setup 基本使用方法</h2>
     <h2>{{ counter }}</h2>
+    <h2>name : {{ name }}</h2>
+    <input type="text" v-model="name">
     <button @click="add">+</button>
     <button @click="minus">-</button>
     <button @click="printlog">PrintLog</button>
+     <button @click="counter++">add Count 2</button>
   </div>
   <Footer></Footer>
 </template>
@@ -25,6 +28,7 @@ import { ref } from 'vue';
 import Footer from '@/views/components/Footer.vue';
 
 const counter = ref(0);
+const name = ref('忍者');
 
 const add = (): void => {
       counter.value = counter.value + 1
@@ -35,7 +39,9 @@ const minus = (): void => {
 }
 
 const printlog = (): void => {
-  console.log('log here!');
+  name.value = 'Joshua is 忍者';
+  counter.value = 0;
+  console.log('reset ok!');
 }
 
 </script>
