@@ -1,10 +1,11 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <input type="text" v-model="search">
-    <p>search trem - {{ search }}</p>
-    <div v-for="name in matchingNames" :key="name">{{ name }}</div>
   </div>
+  <input type="text" v-model="search">
+  <p>search trem - {{ search }}</p>
+  <div v-for="name in matchingNames" :key="name">{{ name }}</div>
+  <button @click="stopWatchOnclick">關閉監控</button>
   <Footer></Footer>
 </template>
 
@@ -19,7 +20,7 @@
 </style>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, ref, watch} from 'vue';
 import Footer from '@/views/components/Footer.vue';
 
 // export default {
@@ -39,8 +40,16 @@ import Footer from '@/views/components/Footer.vue';
     const search = ref('');
     const names = ref(['mario', 'youshi', 'luggi', 'toad',]);
 
+    const stopWatch = watch(search, () => {
+        console.log('watch function...');
+    })
+
     const matchingNames = computed(() => {
       return names.value.filter((name) => name.includes(search.value))
     })
+
+    const stopWatchOnclick = () => {
+        stopWatch();
+    }
 
 </script>
