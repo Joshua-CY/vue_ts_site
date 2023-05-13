@@ -1,0 +1,24 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "welcome-fromDB",
+            "body": "this is article1, so have fun!",
+            "tags": [
+                "web",
+                "coding",
+                "news"
+            ]
+        },
+        {
+            "id": 1,
+            "title": "welcome-fromDB",
+            "body": "this is article2, let's get adventure!",
+            "tags": [
+                "css",
+                "life",
+                "news"
+            ]
+        }
+    ]
+}
