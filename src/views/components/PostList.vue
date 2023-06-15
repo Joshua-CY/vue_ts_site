@@ -1,7 +1,7 @@
 <template>
     <div class="post-list">
         <div v-for="post in posts" :key="post.id">
-            <h3>{{ post.title }}</h3>
+            <h3 :class="{ highlight: post.isHighlight }">{{ post.title }}</h3>
             <h6>{{ post.body }}</h6>
         </div>
     </div>
@@ -19,5 +19,9 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
+.highlight {
+  background-color: red;
+  font-size: 24px;
+}
 </style>

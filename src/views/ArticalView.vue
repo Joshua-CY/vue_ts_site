@@ -35,8 +35,8 @@ import PostList from '@/views/components/PostList.vue';
             * 因為json-server在docker啟動有問題，所以先寫死測試。
             */
             let data = [
-                { title: 'welcome', body: 'this is article1', id: 1},
-                { title: 'today', body: 'this is article12', id: 2},
+                { title: 'welcome', body: 'this is article1', id: 1, isHighlight: false},
+                { title: 'today', body: 'this is article12', id: 2, isHighlight: true},
             ];
             posts.value = data;
 
