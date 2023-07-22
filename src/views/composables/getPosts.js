@@ -24,8 +24,8 @@ const getPosts = () => {
             * 因為json-server在docker啟動有問題，所以先寫死測試。
             */
             let data = [
-                { title: 'welcome', body: 'this is article1', id: 1, isHighlight: false},
-                { title: 'today', body: 'this is article12', id: 2, isHighlight: true},
+                { title: 'welcome', body: 'this is article1', id: 1, tags:["news", "coding", "style"], isHighlight: false},
+                { title: 'today', body: 'this is article12', id: 2, tags:["css", "web"], isHighlight: true},
             ];
             posts.value = data;
 
