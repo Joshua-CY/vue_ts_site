@@ -20,7 +20,7 @@ const getPost = (id) => {
             */
             let data = [
                 { title: 'welcome', body: 'this is article1', id: 1, tags:["news", "coding", "style"], isHighlight: false},
-                { title: 'today', body: 'this is article12', id: 2, tags:["css", "web"], isHighlight: false},
+                { title: 'today', body: 'this is article2', id: 2, tags:["css", "web"], isHighlight: false},
             ];
             post.value = data[id-1];
 
