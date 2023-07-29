@@ -1,6 +1,9 @@
 <template>
     <div class="post">
-        <h3 :class="{ highlight: post.isHighlight }">{{ post.title }}</h3>
+        <router-link :to="{name: 'articalDetails', params: { id: post.id} }">
+            <h3 :class="{ highlight: post.isHighlight }">{{ post.title }}</h3>
+        </router-link>
+
         <P>{{ snippet }}</P>
         <span v-for="tag in post.tags" :key="tag">
             #{{ tag }}
