@@ -10,8 +10,8 @@
 </template>
 
 <script lang="ts">
-import getPost from '@/views/composables/getPost';
-import Spinner from '@/views/components/Spinner.vue';
+import getPost from '../composables/getPost';
+import Spinner from '../components/Spinner.vue';
 
 export default {
     props: ['id'],

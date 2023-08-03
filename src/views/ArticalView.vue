@@ -11,9 +11,9 @@
 </template>
 
 <script setup lang="ts">
-import PostList from '@/views/components/PostList.vue';
-import getPosts from '@/views/composables/getPosts';
-import Spinner from '@/views/components/Spinner.vue';
+import PostList from '../components/PostList.vue';
+import getPosts from '../composables/getPosts';
+import Spinner from '../components/Spinner.vue';
 
     const {posts, error, load} = getPosts();
     load();

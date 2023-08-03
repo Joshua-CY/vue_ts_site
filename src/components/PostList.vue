@@ -10,7 +10,7 @@
 
 
 <script lang="ts">
-import SinglePost from '@/views/components/SinglePost.vue';
+import SinglePost from '../components/SinglePost.vue';
 // script 裡面放setup就不能使用 export default 等ES5寫法。設置props還是OK
 
 export default {

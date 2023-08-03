@@ -25,7 +25,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import Footer from '@/views/components/Footer.vue';
+import Footer from '../components/Footer.vue';
 
 const counter = ref(0);
 const name = ref('忍者');
