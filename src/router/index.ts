@@ -32,6 +32,11 @@ const router = createRouter({
       name: 'articalDetails',
       component: () => import('@/views/ArticalDetails.vue'),
       props: true
+    },
+    {
+      path: '/createPost',
+      name: 'createPost',
+      component: () => import('@/views/CreatePost.vue')
     }
   ]
 })
