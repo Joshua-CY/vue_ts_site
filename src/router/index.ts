@@ -41,4 +41,16 @@ const router = createRouter({
   ]
 })
 
+router.beforeEach((to) => {
+  if (to.name) {
+    console.log('next page :' + to.name);
+  }
+});
+router.afterEach((to) => {
+  if (to.name) {
+    console.log('arrive next page :' + to.name);
+  }
+});
+
+
 export default router
