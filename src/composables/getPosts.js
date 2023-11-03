@@ -29,8 +29,9 @@ const getPosts = () => {
             * 因為json-server在docker啟動有問題，所以先寫死測試。
             */
             let data = [
-                { title: 'welcome', body: 'this is article1', id: 1, tags:["news", "coding", "style"], isHighlight: false},
-                { title: 'today', body: 'this is article2', id: 2, tags:["css", "web"], isHighlight: false},
+                { title: 'welcome', body: 'this is article1', id: 1, tags:["news", "coding", "style"], isHighlight: false },
+                { title: 'today', body: 'this is article2', id: 2, tags:["css", "web"], isHighlight: false },
+                { title: 'tomorrow', body: 'this is article3', id: 2, tags:["css", "web"], isHighlight: false },
             ];
             posts.value = data;
 
@@ -39,7 +40,7 @@ const getPosts = () => {
         }
     };
 
-    return {posts, error, load};
+    return { posts, error, load };
 }
 
 export default getPosts;
