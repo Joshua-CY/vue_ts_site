@@ -5,6 +5,10 @@
     <p>Count: {{ counter.double }}</p>
     <button @click="connterStore.increment">+1</button>
     <button @click="connterStore.reduce">-1</button>
+    <p>composition Count: {{ count }}</p>
+    <p>composition Count: {{ doubleCount }}</p>
+    <button @click="connterStoreWithComposition.increment">+1 (compositionAPI)</button>
+    <button @click="connterStoreWithComposition.reduce">-1 (compositionAPI)</button>
   </div>
   <input type="text" v-model="search">
   <p>search trem - {{ search }}</p>
@@ -26,7 +30,8 @@
 <script setup lang="ts">
 import { computed, ref, watch} from 'vue';
 import Footer from '../components/Footer.vue';
-import { useCounterStoreV2 } from '@/stores/useCounterStore';
+import { useCounterStoreOption } from '@/stores/useCounterStore';
+import { useCounterStore } from '@/stores/counter';
 import { storeToRefs } from 'pinia';
 
 // export default {
@@ -43,9 +48,12 @@ import { storeToRefs } from 'pinia';
 //   }
 // }
 
-    const connterStore = useCounterStoreV2();
+    const connterStore = useCounterStoreOption();
     const counter = storeToRefs(connterStore);
-    
+
+    const connterStoreWithComposition  = useCounterStore();
+    const { count, doubleCount } = storeToRefs(connterStoreWithComposition);
+
     const search = ref('');
     const names = ref(['mario', 'youshi', 'luggi', 'toad',]);
 
