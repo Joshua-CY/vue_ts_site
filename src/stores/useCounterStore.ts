@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 
 // 使用options API模式定義
-export const useCounterStoreOption = defineStore('counter', {
+export const useCounterStoreOption = defineStore('counterV2', {
     state: () => {
         return { count: 0 }
     },

@@ -1,8 +1,8 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <p>Count: {{ counter.count }}</p>
-    <p>Count: {{ counter.double }}</p>
+    <p>Count: {{ counterV2.count }}</p>
+    <p>Count: {{ counterV2.double }}</p>
     <button @click="connterStore.increment">+1</button>
     <button @click="connterStore.reduce">-1</button>
     <p>composition Count: {{ count }}</p>
@@ -49,7 +49,7 @@ import { storeToRefs } from 'pinia';
 // }
 
     const connterStore = useCounterStoreOption();
-    const counter = storeToRefs(connterStore);
+    const counterV2 = storeToRefs(connterStore);
 
     const connterStoreWithComposition  = useCounterStore();
     const { count, doubleCount } = storeToRefs(connterStoreWithComposition);
