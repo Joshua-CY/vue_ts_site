@@ -78,15 +78,15 @@ import Footer from '../components/Footer.vue';
                           <a href="/about" class="nav-item nav-link">關於我們</a>
                           <a href="service.html" class="nav-item nav-link">最新活動</a>
                           <div class="nav-item dropdown">
-                              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">精彩內容</a>
-                              <div class="dropdown-menu border-0 rounded-0 m-0" aria-labelledby="dropdownMenuButton">
-                                  <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                  <a href="single.html" class="dropdown-item">Blog Detail</a>
-                                  <a href="destination.html" class="dropdown-item">Destination</a>
-                                  <a href="guide.html" class="dropdown-item">Travel Guides</a>
-                                  <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                              </div>
-                          </div>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">精彩內容</a>
+                            <div class="dropdown-menu border-0 rounded-0 m-0">
+                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                                <a href="single.html" class="dropdown-item">Blog Detail</a>
+                                <a href="destination.html" class="dropdown-item">Destination</a>
+                                <a href="guide.html" class="dropdown-item">Travel Guides</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            </div>
+                        </div>
                           <a href="contact.html" class="nav-item nav-link">聯絡我們</a>
                       </div>
                   </div>
